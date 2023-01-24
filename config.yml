@@ -1,0 +1,6 @@
+gcp-project: deb-01
+bigquery:
+  dataset-name: sf_bikeshare
+source-files:
+  -file1.csv
+  -file2.csv
