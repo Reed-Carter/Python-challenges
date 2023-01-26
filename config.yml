@@ -2,5 +2,5 @@ bigquery:
   dataset-name: chicago_crime
 gcp-project: deb-01
 source-files:
-- file1.csv
-- file2.csv
+- Python-challenges
+- data-engineering-bootcamp
