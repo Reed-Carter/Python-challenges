@@ -1,6 +1,6 @@
-gcp-project: deb-01
 bigquery:
-  dataset-name: sf_bikeshare
+  dataset-name: chicago_crime
+gcp-project: deb-01
 source-files:
-  -file1.csv
-  -file2.csv
+- file1.csv
+- file2.csv

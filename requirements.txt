@@ -8,3 +8,4 @@ Faker==15.3.2
 faker_airtravel==0.4
 faker-vehicle==0.2.0
 db-dtypes==1.0.5
+pyyaml
