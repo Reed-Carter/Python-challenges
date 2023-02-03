@@ -20,24 +20,36 @@
 import click
 import time
 
+
+# adding a group of cli sub-commands
+# this is just a placeholder to add the sub-commands later
 @click.group()
 def cli():
+    """A Program to sleep or dance!"""
     pass
 
+
+# sleep sub-command with --duration option
 @click.command()
-@click.option('--style', default='tango', help='dance style')
+@click.option('--duration', type=int, default=1, help='Number of seconds to sleep')
+def sleep(duration):
+    """sleep for a bit"""
+    click.echo(f"sleeping for {duration} seconds")
+    time.sleep(duration)
+
+
+# dance sub-command with --style option
+@click.command()
+@click.option('--style', default='Cha Cha', help='Type of dance')
 def dance(style):
-    """tells dance style"""
-    click.echo(f"Dancing {style}!")
+    """dancing the night away!"""
+    click.echo(f"dancing {style}")
 
-@click.command()
-@click.option('--sleep', default=1, help='seconds to sleep')
-def sleeps(duration):
-    """tells sleep time"""
-    click.echo(f"sleeping for {duration}!")
 
+# now, add the sub-commands to the cli group
+cli.add_command(sleep)
 cli.add_command(dance)
-cli.add_command(sleeps)
+
 
 if __name__ == '__main__':
     cli()
